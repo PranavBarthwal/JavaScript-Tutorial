@@ -1,7 +1,7 @@
 const accountId = 144553
 let accountEmail = "hitesh@google.com"
 var accountPassword = "12345"
-accountCity = "Jaipur"
+accountCity = "Jaipur"         //ese bhi variable declare hojata h lekin not a good practice
 let accountState;
 
 // accountId = 2 // not allowed
