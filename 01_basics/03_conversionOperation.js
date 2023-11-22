@@ -28,7 +28,7 @@
 
 // let valueInNumber3 = Number(score3) 
 // console.log(typeof valueInNumber3)         // we get number
-// console.log(valueInNumber3)                // we get 0 (null is coverted into 0 by using Number())
+// console.log(valueInNumber3)                // we get 0 (null is converted into 0 by using Number())
 
 
 
@@ -74,14 +74,14 @@
 
 // let isLoggedIn3 = ""
 
-// let booleanIsLoggedIn3 = Boolean(isLoggedIn3)       //coverts number to boolean
+// let booleanIsLoggedIn3 = Boolean(isLoggedIn3)       //converts empty string to boolean
 // console.log(booleanIsLoggedIn3)                     // we will get false
 
 
 
 // let isLoggedIn4 = "hitesh"
 
-// let booleanIsLoggedIn4 = Boolean(isLoggedIn4)       //coverts number to boolean
+// let booleanIsLoggedIn4 = Boolean(isLoggedIn4)       //converts string to boolean
 // console.log(booleanIsLoggedIn4)                     // we will get true
 
 
@@ -95,6 +95,9 @@
 
 let someNumber = 33
 
-let stringNumber = S
+let stringNumber = String(someNumber)
+console.log(stringNumber);              // gives 33
+console.log(typeof (stringNumber))      // gives string, therefore successfully converted
+
 
 
