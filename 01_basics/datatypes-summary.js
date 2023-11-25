@@ -12,7 +12,9 @@
 
 
 
-//USING BIGINT IN JS 
+//USING BIGINT IN JS : add n after the big integer
+
+const bigNumber = 64816843518512n
 
 
 
@@ -30,3 +32,24 @@ DATATYPES ARE OF TWO TYPES :
 2. NON-PRIMITIVE : call by Reference
                  : a) array b) objects c)functions             
 */
+
+
+
+// ARRAY 
+const games = ["mario", "gta", "real cricket"];
+
+// OBJECT
+let myObj = {
+    name : "hitesh",
+    age : 22,
+}
+
+// FUNCTION
+const myFunction = function(){
+    console.log("hello world")
+}
+
+
+
+// STUDY typeof() DIFFERENT DATATYPES FROM THIS DOCUMENTATION
+// https://262.ecma-international.org/5.1/#sec-11.4.3
