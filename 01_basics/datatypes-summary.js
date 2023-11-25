@@ -36,18 +36,18 @@ DATATYPES ARE OF TWO TYPES :
 
 
 // ARRAY 
-const games = ["mario", "gta", "real cricket"];
+// const games = ["mario", "gta", "real cricket"];
 
 // OBJECT
-let myObj = {
-    name : "hitesh",
-    age : 22,
-}
+// let myObj = {
+//     name : "hitesh",
+//     age : 22,
+// }
 
 // FUNCTION
-const myFunction = function(){
-    console.log("hello world")
-}
+// const myFunction = function(){
+//     console.log("hello world")
+// }
 
 
 
