@@ -70,6 +70,6 @@ console.log(newDate.getMinutes())
 
 // Make customised formats using toLocaleString() method
 
-newDate.toLocaleString('dafault' {
+newDate.toLocaleString('dafault', {
     weekday : "long",
 })
