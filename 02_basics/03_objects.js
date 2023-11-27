@@ -9,7 +9,7 @@
 
 
 
-// LITERALS METHOD
+// LITERALS METHOD : creates non singleton object
 
 
 const mySym = Symbol("key1")
