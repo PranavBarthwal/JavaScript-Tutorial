@@ -36,22 +36,40 @@ const user = {
 // console.log(user["email"])
 // console.log(user["age"])
 // console.log(user["employee Id"])
-console.log(user[mySym])
+//console.log(user[mySym])
 
 // typeof this mySym
-console.log(typeof user[mySym])                 //gives string, normally agar hum symbol ko use kre object mein to vo as a symbol nhi blki as a string store hota hai. therefore we have a specific syntax for using symbols in objects. [mySym] = "myKey10"
+//console.log(typeof user[mySym])                 
+//gives string, normally agar hum symbol ko use kre object mein to vo as a symbol nhi blki as a string store hota hai. therefore we have a specific syntax for using symbols in objects. [mySym] = "myKey10"
 
 
 
 // changing object values
-user.name = "durgesh"
+// user.name = "durgesh"
 
-Object.freeze(user)                    // is object ko freeze krdia, ab ismein changes nhi honge
+// Object.freeze(user)                    // is object ko freeze krdia, ab ismein changes nhi honge
 
-user.name = "shwetabh"                 // ye name change nhi hoga
+// user.name = "shwetabh"                 // ye name change nhi hoga
 
-console.log(user)
+// console.log(user)
 
 
 
-// Creating a funciton
+// Creating a function
+
+user.greeting = function(){
+    console.log(`hello User, ${this.name}`)
+}
+
+console.log(user.greeting)                // gives [Function (anonymous)]
+
+console.log(user.greeting())             // gives hello user, Hitesh & undefined
+
+
+
+
+
+
+
+
+
