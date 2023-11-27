@@ -97,3 +97,19 @@
 
 
 
+//*************************************************************OBJECTS DESTRUCTURING********************************************************
+
+//object destructuring is purely used as a syntactic sugar. Our dot notation method also works fine but to make the code more readble we us object destructuring
+
+
+const course = {
+    coursename:"js in hindi",
+    price:999,
+    courseInstructor:"hitesh"
+}
+
+//console.log(course.courseInstructor)                   // works fine but very long
+
+// destructuring
+const {courseInstructor : instr} = course                // now instead of using course.courseInstructor , we can simply use instr
+console.log(instr)
