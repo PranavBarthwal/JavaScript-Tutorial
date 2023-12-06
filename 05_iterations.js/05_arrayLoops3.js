@@ -1,4 +1,4 @@
-// for each loop
+// for each loop : ye array ka built in function hai
 
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
@@ -46,25 +46,46 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 
 // accessing elements in array of objects using for each loop
 
-const myCoding = [
-    {
-        languageName: "javascript",
-        languageFileName: "js"
-    },
-    {
-        languageName: "java",
-        languageFileName: "java"
-    },
-    {
-        languageName: "python",
-        languageFileName: "py"
-    },
-]
+// const myCoding = [
+//     {
+//         languageName: "javascript",
+//         languageFileName: "js"
+//     },
+//     {
+//         languageName: "java",
+//         languageFileName: "java"
+//     },
+//     {
+//         languageName: "python",
+//         languageFileName: "py"
+//     },
+// ]
 
-myCoding.forEach( (item) => {
+// myCoding.forEach( (item) => {
     
-    console.log(item.languageName);
+//     console.log(item.languageName);
+// } )
+
+
+
+
+
+
+// storing this for each loop in a constant and then seeing if it returns something
+
+const coding2 = ["js", "ruby", "java", "python", "cpp"]
+
+
+const values = coding2.forEach( (item) => {
+    //console.log(item);
+    return item
 } )
+
+console.log(values);           // we get undefined, for each loop values return nhi krta
+
+
+
+
 
 
 
