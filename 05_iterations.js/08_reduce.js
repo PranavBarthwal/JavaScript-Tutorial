@@ -1,32 +1,3 @@
-// MAPS
-
-// const myNums = [1,2,3,4,5,6,7,8,9,10]
-
-// const newNums = myNums.map((item) => (item+10))
-// console.log(newNums)             // gives [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-
-
-
-
-// chaining of maps & filters
-
-let arr = [1,2,3,4,5,6,7,8,9,10]
-
-const newArr = arr
-                .map((item) => item*10)
-                .map((item) => item+1)
-                .filter((item) => item >= 40)
-
-console.log(newArr)                //we get [ 41, 51,  61, 71, 81, 91, 101 ]
-
- 
-
-
-
-
-//************************************************************************************************** 
-
-
 /*
  Map, Filter, and Reduce are Array methods which help to create new arrays in various ways. They are all 'higher order' functions because they take user-defined functions as parameters.
 
@@ -38,3 +9,7 @@ Reduce: can be used to return almost anything. It is often used to return a sing
 
 The callback for Reduce has two parameters: the accumulator and the current value. Make sure you always return the accumulator after modifying it! In addition to the callback, Reduce receives a second parameter that will define the initial value of the accumulator
 */
+
+
+
+// ****************************************************************************************
