@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM </title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+
+    const parent = document.querySelector('.parent')
+    // console.log(parent)
+    // console.log(parent.children)
+    
+    // console.log(parent.children[1].innerHTML)
+
+    // for(let i=0; i<parent.children.length; i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+ 
+
+    // parent.children[0].style.color = "orange"
+    // parent.children[1].style.color = "white"
+    // parent.children[2].style.color = "green"
+    // parent.children[3].style.color = "gray"
+
+
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+
+
+    const dayOne = document.querySelector('.day')    // selects first day
+    // console.log(dayOne)
+    
+    //accessing dayOne's parent element
+    // console.log(dayOne.parentElement)
+
+    //accessing dayOne's sibling elements
+    // console.log(dayOne.nextElementSibling)       // we get tuesday wala element
+
+    
+
+    // accessing all the nodes of the parent element
+    console.log(parent.childNodes)           // expected 4 nodes ki sath sath extra text nodes bhi hai
+    
+
+
+
+
+
+
+</script>
+</html>
