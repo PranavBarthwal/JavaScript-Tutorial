@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+<script>
+    
+    //creating a new element using JS and DOM
+    const div = document.createElement('div')
+    console.log(div);
+
+    //giving attributes to this element
+    div.className = "main"                   // ye pehle document se original class name layega then use overwrite krega to ismein round trip hai to less optimised
+    div.id = Math.round(Math.random()*10+1)
+    div.setAttribute("title", "generated Title")      // this method is more optimised way of setting attributes as this directly sets the values of these operators
+    div.style.backgroundColor = "green"
+    // div.innerText = "chai aur code"     // this is said to be less optimised approach of setting inner text as ye pehle document se original value of inner text layega then use overwrite krega
+
+    //more optimised way of adding inner text
+    const addText = document.createTextNode("chai aur code")
+    div.appendChild(addText)
+
+    // appending this child to the document body (i.e. our web page)
+    document.body.appendChild(div)
+
+
+
+
+</script>
+</html>
