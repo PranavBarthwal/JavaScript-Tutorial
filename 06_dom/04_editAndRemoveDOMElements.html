@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: azure;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+
+    // function to add new items to list
+    const addLang = (langName) => {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+
+    }
+
+    addLang("TypeScript")
+    addLang("Python")
+    addLang("Ruby On Rails")
+
+
+    // more optimised way of adding new items to list (Using text node instead of targeting inner html)
+    const optimisedAddLang = (langName) => {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+
+    optimisedAddLang("Go Lang")
+    optimisedAddLang("Kotlin")
+
+
+
+    // Edit items of list
+    const secondLang = document.querySelector("li:nth-child(2)")
+
+    //secondLang.textContent = "Mojo"     // works fine but less optismised due to whole dom tree traversal takes place everytime
+    
+    //another method 
+    const newli = document.createElement('li')
+    newli.textContent = 'Mojo'
+    secondLang.replaceWith(newli)
+
+    // another method
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>C++</li>"
+
+
+
+
+
+    // remove items
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+    
+
+
+</script>
+</html>
