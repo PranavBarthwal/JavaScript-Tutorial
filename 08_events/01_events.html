@@ -47,35 +47,77 @@
     // altkey, ctrlkey, shiftkey, keyCode
     
 
+    // *********************EVENT PROPAGATION****************************
     // why we have written third parameter false while adding an event listener - 
-        //    Event Propagation : 1. Event Bubbling - (false (default)) - starts from lower Element and propagates to higher Element
+        //    EVENT PROPAGATION : 1. Event Bubbling - (false (default)) - starts from lower Element and propagates to higher Element
         //                        2. Event Capturing - (true) - starts from higher Element and propagates to lower Element
 
 
     
+    //********************Event Bubbling Example ****************************
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the UL");
+    // }, false)
+
+
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
     // }, false)
+
+
+    // in this we passed the third parameter as default (false) , so event bubbling took place, So when we clicked a normal image in ul we got the message "clicked inside the UL". but when the owl IMAGE got clciked which is also an UL then we first got the message from lower element "owl clicked" then we got the message from the higher element "clicked inside the UL".
+
+
+
+     //********************Event Capturing Example ****************************
+
+    //  document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the UL");
+    // }, true)
+
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    // }, true)
+
+
+    // in this we passed the third parameter as true , so event bubbling took place, So when we clicked a normal image in ul we got the message "clicked inside the UL". but when the owl IMAGE got clciked which is also an UL then we first got the message from jhigher element "clicked inside the UL" then we got the message from the lower element "owl clicked".
+
+
+
+
+
+    // *************************stopPropagation() & preventDefault()****************************
+    // we can use e.stopPropagation() method to prevent automatic bubbling
+    // we can use e.preventDefault() method to stop default action from taking place
+
     
     // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
-    //     console.log("google clicked");
+    //     e.preventDefault();                             // it'll prevent default action of clicking google link (redirecting to google website)
+    //     e.stopPropagation()                             // it will stop bubbling and we'll not get the message "clicked inside the UL"
+    //     console.log("google clicked");             
     // }, false)
    
     
+
+
+
+
+
+    //task : ul mein jo images hai should dissappear on clicking
+
     document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
-        }
-    
         
+        if(e.target.tagName === 'IMG'){             // .target.tagname gives the tags of the target (element that triggered the event)
+        let removeIt = e.target.parentNode        // target gives the element which triggered the event e (here target will be image) and parent node will give its aprent element (here parent element will be li)          
+        // but ismein dikkat hai ki agar humseedha li ko (bullet point) select krenge to uska parent ul select hoga and puri ul delete hojayegi so if condition se check krenge
+        removeIt.remove()
+    }
     })
+        
+    //})
     
-    //removeIt.parentNode.removeChild(removeIt)
+    //removeIt.parentNode.removeChild(removeIt)    // another way of removing elements
 </script>
 </html>
