@@ -27,22 +27,29 @@
     // }
 
     // 2. attachEvent()
-    // 3. jQuery - on
+    // 3. jQuery - on functionality 
 
 
     // EVENTLISTENERS
 
-    // IMP THINGS IN EVENT OBJECT
+
+    // ADDING EVENTLISTENERS : in addition to onclick functionality, eventlisteners give ability of propagation
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+
+
+    // IMP THINGS IN EVENT OBJECT (e)
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
     
 
-    // ADDING EVENTLISTENERS
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false)
+    // why we have written third parameter false while adding an event listener - 
+        //    Event Propagation : 1. Event Bubbling - (false (default)) - starts from lower Element and propagates to higher Element
+        //                        2. Event Capturing - (true) - starts from higher Element and propagates to lower Element
 
 
     
