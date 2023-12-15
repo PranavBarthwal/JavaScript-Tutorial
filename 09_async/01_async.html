@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CHAI & CODE</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+
+//***************************SET TIMEOUT FXN*******************
+
+    setTimeout(function(){
+        console.log("hitesh")
+    }, 2000)
+
+    // we can also pass reference of the fucntion
+    const sayhi = function(){
+        console.log("Hi!")
+    }
+    const hi = setTimeout(sayhi,3000)     // only pass the refernce of the fxn and not execute the fxn by writing sayHi()
+
+    //clearTimeout() : agar humne ye execute krdia to setTimeout function execute nhi hoga
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(hi)
+        console.log("stopped")
+    })
+    //ab agar humne 3 sec se pehle stop button daba diya to hi function execute nhi hoga and hi! console.log nhi hoga
+
+
+
+</script>
+</html>
