@@ -17,12 +17,14 @@ const sayDate = function(str){
     console.log(str, Date.now())
 }
 
+let intervalID;
+
 const startInterval = function(){
-    setInterval(sayDate, 1000, "helloo jii")
+    intervalID = setInterval(sayDate, 1000, "helloo jii")
   }
 
 const stopInterval = function(){
-    clearInterval(startInterval)
+    clearInterval(intervalID)
   }
 
 
