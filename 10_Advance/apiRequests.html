@@ -20,4 +20,27 @@ Value	State	                     Description
 
 
 </body>
+
+<script>
+
+    const requestUrl = 'https://api.github.com/users/PranavBarthwal'
+    const xhr = new XMLHttpRequest()
+
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function (){         // tracks the current state. executes everytime the state gets changed
+        console.log(xhr.readyState)
+
+        if(xhr.readyState === 4){                // if the operation is complete we'll print the current context wala response text
+            const data = JSON.parse(this.responseText)
+            console.log(data)        // gives us the data we recieved from github API. Usually we get this data in the form of string even tough it looks like an object. so before accessing elements from it like data.name we need to convert it to an object(JSON)
+
+            console.log(data.name)        // gives Pranav Barthwal
+        }
+    }
+    xhr.send()
+
+
+    
+
+</script>
 </html>
