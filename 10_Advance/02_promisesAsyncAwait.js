@@ -179,7 +179,7 @@
 // async function getAllUsers(){
 
 //     try{
-//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')           // we can also pass other parameters like option in fetch() like we did in DALL-E Project
 //         const data = await response.json()
 //         console.log(data)
 //     } catch(error){
