@@ -11,4 +11,10 @@ agar humein error 404 ya 304 mila to vo as a response treat hoga, error sirf tb 
 
 
 
-reference 
+reference : 04_01_UnderstandingFetch
+
+jb hum js engine se setTimeout type ka koi async fxn call krte hai then vo callback register krke task queue mein add krta jata h callbacks ko.  And event loop check krta rehta hai jese hi uss callback ka tme hota hai use js engine ke call satck mein daal deta hai and vo execute hojata hai.
+
+noww during prmoises's tutorial we noticed that jo humnein fetch se resources mangaye the vo pehle exute hokr aagye the and baki ke fxn baadmein execute huye the. 
+this is because fetch ke tasks ke liye alag special queue bnti hai, called MICROTASK QUEUE / FETCH QUEUE / PRIORITY QUEUE.
+Microtask queue wale fxn ko pehle priority milti hai hmesha
