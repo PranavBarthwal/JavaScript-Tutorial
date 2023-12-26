@@ -18,3 +18,15 @@ jb hum js engine se setTimeout type ka koi async fxn call krte hai then vo callb
 noww during prmoises's tutorial we noticed that jo humnein fetch se resources mangaye the vo pehle exute hokr aagye the and baki ke fxn baadmein execute huye the. 
 this is because fetch ke tasks ke liye alag special queue bnti hai, called MICROTASK QUEUE / FETCH QUEUE / PRIORITY QUEUE.
 Microtask queue wale fxn ko pehle priority milti hai hmesha
+
+
+reference : 04_02_UnderstandingFetch
+
+jab hum fetch ko call krte hai to kaam hote hai 
+1. Browser ki API ya Node ki API request handle krna through which we can do network request, 
+   ab agar network request se kuch bhi data aaya to vo onfullfilled[] wali array mein store hoajyega. and agar network se connect nhi kr paye ya response aaya hi nhi then vo store hojayega onrejection[] wali array mein. 
+   agar network se error 404 ka bhi response aaya to vo bhi as a response treat hoga and onfullfilled[] mein store hoga, as network se connect to kr hi liya tha.
+
+2. Space reservation for variables in memory. it makes two arrays onfulfilled[] and onrejection[].
+   onfulfilled represents promise's resolution and on rejection represents promise's rejection. we cant push elements in these arrays as we dont have their access.
+   ab ye onfullfilled[] and onrejection[] mein hote hai fxn jo inke andar ke elements ko data mein daalte hai. and then data se value humare response mein chli jaati hai which is available in the global memory (response =  fetch("ghvcjhv.com"))
