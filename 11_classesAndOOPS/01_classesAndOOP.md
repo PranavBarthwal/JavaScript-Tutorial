@@ -2,7 +2,9 @@
 Yes, JavaScript does have classes. However, it's important to note that JavaScript's class system is syntactic sugar over its PROTOTYPE-BASED inheritance model. Classes were introduced in ECMAScript 6 (ES6), providing a more familiar syntax for developers who come from class-based languages like Java or C++.
 
 
-## OOP : Object Oriented Programming
+## OOP : Object Oriented Programming 
+- it is a programming paradigm, which means what structure we have of writing code
+
 
 ## Object
 - collection of properties and methods
