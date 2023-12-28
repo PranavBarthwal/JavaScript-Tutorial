@@ -74,3 +74,13 @@ The constructor is called: The constructor function is called with the specified
 The new object is returned: After the constructor function has been called, if it doesn't return a non-primitive value (object, array, function, etc.), the newly created object is returned.
 
 */
+
+
+
+
+
+
+
+
+
+//**********************Prototype************************************* 
