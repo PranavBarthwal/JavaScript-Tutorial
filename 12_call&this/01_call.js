@@ -21,6 +21,7 @@ function createUser(username, email, password){
 
 
     // to fix this we use call keyword to explicitly call that fucntion, and hold the reference of our function also we pass a parameter 'this' to give current context of our current fxn.
+    // call keyword humara current execution context kisi aur function ko pass krne mein help krta hai
     setUsername.call(this, username)
 
     // now we get the below output where user name is successfully set
