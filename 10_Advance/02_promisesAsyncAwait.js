@@ -195,7 +195,7 @@
 
 // using getch with .then chaining (also called thenables)
 
-fetch('https://api.github.com/users/hiteshchoudhary')
+fetch('https://newsapi.org/v2/everything?q=cosmos+space+astronomy&apiKey=8dd3b475d81046778532c0ef47fba20e')
 .then((response) => {
     return response.json()
 }).then((data) => {
