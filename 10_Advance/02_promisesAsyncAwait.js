@@ -208,6 +208,19 @@ fetch('https://newsapi.org/v2/everything?q=cosmos+space+astronomy&apiKey=8dd3b47
 
 
 
+<!-- async and await are features in many programming languages, especially in those that support asynchronous programming. 
+They are commonly used in situations where certain operations may take some time to complete, such as I/O operations or network requests.
+Instead of blocking the execution of code until the operation is complete,
+async and await allow you to write asynchronous code that doesn't block the main thread, enabling more efficient use of resources.
+Here are some common use cases for async and await:
+  The primary purpose of async/await is to simplify the syntax of working with promises, making asynchronous code more readable and resembling synchronous code.
+
+Fetching Data from a Remote Server
+Reading Files
+Working with Promises
+Concurrency
+Event Handling
+-->
 
 
 
