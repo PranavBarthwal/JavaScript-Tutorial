@@ -1,0 +1,101 @@
+<!-- Closures and lexical scoping are related concepts in JavaScript and play a crucial role in how functions and variables are scoped and behave.
+
+Lexical Scoping:
+Lexical scoping, also known as static scoping, is a scope resolution mechanism in which the scope of a variable is determined by its location within the source code. In JavaScript, the scope of a variable is defined by its placement in the code structure, and it is determined at the time of the variable's declaration.
+
+Closures:
+A closure is formed when a function is defined within another function, and the inner function has access to the outer function's variables (including its parameters) even after the outer function has finished executing. Closures allow functions to "remember" the scope in which they were created.
+
+Closures are powerful because they allow you to maintain state between function calls and create private variables. They are commonly used in scenarios like creating function factories, encapsulating data, and implementing modules in JavaScript.
+
+In summary, lexical scoping determines the availability of variables based on their location in the source code, and closures allow inner functions to retain access to the variables of their outer functions even after the outer functions have completed execution. -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+    <script>
+
+    // LEXICAL SCOPING
+
+    // function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName() {
+    //         console.log(name);            
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret);
+    //     }
+    //     inner()
+    //     innerTwo()
+
+    // }
+    // outer()
+    // console.log("TOO OUTER", username);
+
+
+
+
+
+   // CLOSURE
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;      // Humne print krane ki jgah seedha us fucntion ka reference ki return krdia. and ismein sirf displayName() hi nhi, sath mein makefunc() ka reference bhi jayega due to lexical scoping.
+    // }
+
+    // const myFunc = makeFunc();      
+    // myFunc();        // mozilla print hojayega as vha humne displayName() function ka reference return krdia and uske sath makefunc() ka reference bhi aagya due to lexical scoping
+
+    </script>
+
+
+
+// PRACTICAL EXAMPLE
+    <script>
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+
+    </script>
+</html>
